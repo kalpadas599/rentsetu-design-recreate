@@ -42,7 +42,7 @@ const HeroSection = () => {
                 onClick={() => setActiveFilter(filter)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   activeFilter === filter
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-[#0d9488] text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -60,10 +60,10 @@ const HeroSection = () => {
                 placeholder="Enter Locality"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0d9488]"
               />
             </div>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center gap-2">
+            <button className="bg-[#0d9488] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#0d9488]/90 transition-colors flex items-center gap-2">
               <Search size={20} />
               Search
             </button>
