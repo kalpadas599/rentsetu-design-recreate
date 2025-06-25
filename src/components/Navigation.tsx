@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import AuthModal from './AuthModal';
 
 const Navigation = () => {
@@ -14,15 +15,17 @@ const Navigation = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-gray-900">RentSetu</h1>
+              <Link to="/">
+                <h1 className="text-2xl font-bold text-gray-900">RentSetu</h1>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                <a href="#" className="text-gray-900 hover:text-[#0d9488] px-3 py-2 text-sm font-medium transition-colors">
+                <Link to="/" className="text-gray-900 hover:text-[#0d9488] px-3 py-2 text-sm font-medium transition-colors">
                   Home
-                </a>
+                </Link>
                 <a href="#" className="text-gray-700 hover:text-[#0d9488] px-3 py-2 text-sm font-medium transition-colors">
                   Our Services
                 </a>
@@ -34,12 +37,11 @@ const Navigation = () => {
 
             {/* Desktop Auth Buttons */}
             <div className="hidden md:flex items-center space-x-4">
-              <button 
-                onClick={() => setAuthModal('signup')}
-                className="bg-[#0d9488] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#0d9488]/90 transition-colors"
-              >
-                List Your Property
-              </button>
+              <Link to="/list-property">
+                <button className="bg-[#0d9488] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#0d9488]/90 transition-colors">
+                  List Your Property
+                </button>
+              </Link>
               <button 
                 onClick={() => setAuthModal('signin')}
                 className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors border border-gray-300 rounded-lg"
@@ -63,9 +65,9 @@ const Navigation = () => {
           {isMenuOpen && (
             <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg border-t">
               <div className="px-2 pt-2 pb-3 space-y-1">
-                <a href="#" className="text-gray-900 block px-3 py-2 text-base font-medium">
+                <Link to="/" className="text-gray-900 block px-3 py-2 text-base font-medium">
                   Home
-                </a>
+                </Link>
                 <a href="#" className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium">
                   Our Services
                 </a>
@@ -73,12 +75,11 @@ const Navigation = () => {
                   How it works
                 </a>
                 <div className="pt-4 pb-3 border-t border-gray-200">
-                  <button 
-                    onClick={() => setAuthModal('signup')}
-                    className="bg-[#0d9488] text-white px-4 py-2 rounded-lg text-sm font-medium w-full mb-2"
-                  >
-                    List Your Property
-                  </button>
+                  <Link to="/list-property">
+                    <button className="bg-[#0d9488] text-white px-4 py-2 rounded-lg text-sm font-medium w-full mb-2">
+                      List Your Property
+                    </button>
+                  </Link>
                   <button 
                     onClick={() => setAuthModal('signin')}
                     className="text-gray-700 px-3 py-2 text-sm font-medium w-full border border-gray-300 rounded-lg"
