@@ -23,13 +23,13 @@ const Navigation = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                <Link to="/" className="text-gray-900 hover:text-[#0d9488] px-3 py-2 text-sm font-medium transition-colors">
+                <Link to="/" className="text-gray-900 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
                   Home
                 </Link>
-                <a href="#" className="text-gray-700 hover:text-[#0d9488] px-3 py-2 text-sm font-medium transition-colors">
+                <a href="#" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
                   Our Services
                 </a>
-                <a href="#" className="text-gray-700 hover:text-[#0d9488] px-3 py-2 text-sm font-medium transition-colors">
+                <a href="#" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
                   How it works
                 </a>
               </div>
@@ -38,8 +38,13 @@ const Navigation = () => {
             {/* Desktop Auth Buttons */}
             <div className="hidden md:flex items-center space-x-4">
               <Link to="/list-property">
-                <button className="bg-[#0d9488] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#0d9488]/90 transition-colors">
+                <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">
                   List Your Property
+                </button>
+              </Link>
+              <Link to="/dashboard">
+                <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">
+                  Dashboard
                 </button>
               </Link>
               <button 
@@ -76,8 +81,13 @@ const Navigation = () => {
                 </a>
                 <div className="pt-4 pb-3 border-t border-gray-200">
                   <Link to="/list-property">
-                    <button className="bg-[#0d9488] text-white px-4 py-2 rounded-lg text-sm font-medium w-full mb-2">
+                    <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium w-full mb-2">
                       List Your Property
+                    </button>
+                  </Link>
+                  <Link to="/dashboard">
+                    <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium w-full mb-2">
+                      Dashboard
                     </button>
                   </Link>
                   <button 
